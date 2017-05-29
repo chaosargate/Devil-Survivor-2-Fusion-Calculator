@@ -1,0 +1,249 @@
+Omega,20,Dionysus
+Omega,34,Tonatiuh
+Omega,39,Aramisaki
+Omega,43,Chernobog
+Omega,52,Wu Kong
+Omega,56,Kartikeya
+Omega,60,Susano-o
+Omega,70,Beiji-Weng
+Omega,76,Shiva
+Megami,19,Sarasvati
+Megami,23,Ishtar
+Megami,27,Kikuri-Hime
+Megami,31,Hathor
+Megami,35,Brigid
+Megami,43,Scathach
+Megami,51,Laksmi
+Megami,55,Isis
+Megami,59,Parvati
+Megami,64,Norn
+Megami,69,Pallas Athena
+Megami,73,Black Maria
+Megami,77,Amaterasu
+Deity,22,Mahakala
+Deity,29,Thor
+Deity,33,Arahabaki
+Deity,37,Odin
+Deity,41,Yama
+Deity,45,Inti
+Deity,49,Mithra
+Deity,53,Osiris
+Deity,57,Lugh
+Deity,61,Alilat
+Deity,65,Baal
+Deity,70,Lord Nan Dou
+Deity,77,Asura
+Vile,23,Orcus
+Vile,32,Baphomet
+Vile,40,Pazuzu
+Vile,48,Abaddon
+Vile,56,Arioch
+Vile,62,Tao Tie
+Vile,68,Tezcatlipoca
+Vile,74,Seth
+Vile,80,Nyarlathotep
+Snake,14,Makara
+Snake,23,Nozuchi
+Snake,30,Pendragon
+Snake,38,Gui Xian
+Snake,44,Quetzalcoatl
+Snake,51,Seiryuu
+Snake,58,Gucumatz
+Snake,66,Orochi
+Snake,72,Ananta
+Snake,76,Yurlungur
+Snake,80,Hoyau Kamui
+Snake,87,Kohryu
+Dragon,12,Toubyou
+Dragon,20,Bai Suzhen
+Dragon,28,Basilisk
+Dragon,36,Asp
+Dragon,44,Ym
+Dragon,51,Python
+Dragon,58,Culebre
+Dragon,65,Vritra
+Dragon,69,Fafnir
+Dragon,73,Vasuki
+Divine,15,Angel
+Divine,24,Power
+Divine,32,Lailah
+Divine,37,Dominion
+Divine,42,Aniel
+Divine,50,Kazfiel
+Divine,54,Sandalphon
+Divine,59,Remiel
+Divine,67,Sraosha
+Divine,74,Metatron
+Avian,8,Itsumade
+Avian,16,Moh Shuvuu
+Avian,24,Hamsa
+Avian,31,Suparna
+Avian,39,Vidofnir
+Avian,46,Badb Catha
+Avian,49,Rukh
+Avian,54,Anzu
+Avian,58,Kau
+Avian,62,Feng Huang
+Avian,69,Garuda
+Avian,77,Da Peng
+Fallen,11,Gagyson
+Fallen,19,Abraxas
+Fallen,22,Dantalian
+Fallen,26,Flauros
+Fallen,33,Barbatos
+Fallen,37,Botis
+Fallen,41,Nisroc
+Fallen,45,Bifrons
+Fallen,49,Orobas
+Fallen,56,Decarabia
+Fallen,64,Murmur
+Fallen,71,Agares
+Fallen,86,Nebiros
+Fallen,99,Satan
+Avatar,13,Heqet
+Avatar,21,Apis
+Avatar,28,Shiisaa
+Avatar,32,Kamapua'a
+Avatar,37,Bai Ze
+Avatar,45,Pabilsag
+Avatar,53,Baihu
+Avatar,60,Airavata
+Avatar,64,Ukano Mitama
+Avatar,68,Barong
+Avatar,76,Anubis
+Beast,2,Kabuso
+Beast,10,Hairy Jack
+Beast,19,Nekomata
+Beast,27,Orthrus
+Beast,35,Cait Sith
+Beast,42,Nue
+Beast,50,Myrmecolion
+Beast,58,Cerberus
+Beast,66,Fenrir
+Beast,72,Cabracan
+Wilder,9,Hare of Inaba
+Wilder,17,Waira
+Wilder,25,Garm
+Wilder,33,Afanc
+Wilder,37,Xiezhai
+Wilder,43,Mothman
+Wilder,50,Taown
+Wilder,54,Catoblepas
+Wilder,57,Sleipnir
+Wilder,65,Behemoth
+Wilder,73,Ammut
+Genma,6,Tam Lin
+Genma,13,Jambavan
+Genma,17,Roitschaggatta
+Genma,21,Ictinike
+Genma,28,Tlaloc
+Genma,33,Hanuman
+Genma,37,Cu Chulainn
+Genma,42,Kama
+Genma,46,Kresnik
+Genma,54,Kangiten
+Genma,61,Ganesha
+Genma,68,Jarilo
+Genma,75,Heimdall
+Fairy,2,Pixie
+Fairy,7,Knocker
+Fairy,14,Kijimunaa
+Fairy,21,Jack Frost
+Fairy,29,Pyro Jack
+Fairy,37,Lorelei
+Fairy,44,Silky
+Fairy,48,Troll
+Fairy,52,Vivian
+Fairy,55,Spriggan
+Fairy,58,Titania
+Fairy,62,Oberon
+Tyrant,26,King Frost
+Tyrant,33,Moloch
+Tyrant,37,Lucifuge
+Tyrant,40,Balor
+Tyrant,47,Hecate
+Tyrant,54,Tzitzimitl
+Tyrant,61,Loki
+Tyrant,68,Mot
+Tyrant,69,Lucifer Frost
+Tyrant,75,Astaroth
+Tyrant,81,Nergal
+Tyrant,86,Belial
+Tyrant,91,Beelzebub
+Tyrant,99,Lucifer
+Kishin,20,Ubelluris
+Kishin,28,Nalagiri
+Kishin,36,Hitokotonusi
+Kishin,43,Take-Mikazuchi
+Kishin,50,Zouchouten
+Kishin,57,Jikokuten
+Kishin,64,Koumoukuten
+Kishin,71,Bishamonten
+Kishin,75,Ometeotl
+Kishin,87,Okuninushi
+Kishin,93,Zaou Gongen
+Touki,3,Kobold
+Touki,10,Bilwis
+Touki,14,Dokkaebi
+Touki,18,Gozuki
+Touki,25,Mezuki
+Touki,33,Ikusa
+Touki,38,Berserker
+Touki,43,Lham Dearg
+Touki,46,Momunofu
+Touki,51,Yaksa
+Touki,59,Nata Taishi
+Touki,67,Oumitsunu
+Touki,76,Titan
+Touki,83,Ongyo-Ki
+Jaki,3,Obariyon
+Jaki,8,Ogre
+Jaki,15,Mokoi
+Jaki,23,Ogun
+Jaki,31,Wendigo
+Jaki,39,Legion
+Jaki,47,Girimehkala
+Jaki,49,Shiki-Ouji
+Jaki,55,Rakshasa
+Jaki,64,Grendel
+Jaki,75,Macabre
+Jaki,80,Black Frost
+Femme,9,Kikimora
+Femme,18,Lilim
+Femme,26,Leanan Sidhe
+Femme,34,Yuki Jyorou
+Femme,38,Peri
+Femme,42,Ixtab
+Femme,46,Hariti
+Femme,50,Dzelarhons
+Femme,58,Rangda
+Femme,66,Anat
+Femme,70,Jahi
+Femme,74,Kali
+Femme,78,Xi Wangmu
+Femme,83,Lilith
+Ghost,1,Poltergeist
+Ghost,6,Agathion
+Ghost,16,Tenong Cut
+Ghost,25,Kumbhanda
+Ghost,34,Loa
+Ghost,41,Pisaca
+Ghost,50,Kudlak
+Ghost,61,Purple Mirror
+Fiend,26,Ghost Q
+Fiend,41,Sage of Time
+Fiend,50,Billiken
+Fiend,63,Trumpeter
+Fiend,79,Mother Harlot
+Fiend,88,Alice
+Hero,31,Neko Shogun
+Hero,39,Hagen
+Hero,50,Jeanne D'Arc
+Hero,57,Yoshitsune
+Hero,70,Guan Yu
+Hero,76,Frost Five
+Hero,82,Masakado
+Element,7,Erthys
+Element,12,Aeros
+Element,17,Aquans
+Element,22,Flaemis
