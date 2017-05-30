@@ -15,6 +15,7 @@ fu = Fusion.new();
 fu.init_combo_hash("fusion_chart_desu2.txt")
 fu.init_demon_hash("desu2_demons.txt")
 fu.init_element_hash("element_fusion.txt")
+fu.init_special_fusion_hash("desu2_special_demons.txt")
 
 #puts demons["Kishin"].keys
 
@@ -31,6 +32,8 @@ puts e1 == fu.fuse(okuninushi, lucifer)
 
 puts fu.fuse(rangda,barong) == fu.fuse(barong, rangda)
 puts fu.fuse(rangda, barong) == shiva
-puts fu.special_fusion(rangda, barong) == shiva
+puts fu.special_fusion(rangda.get_name, barong.get_name) == shiva
 puts fu.fuse(shiva,barong).get_name
 puts fu.fuse(nebiros, belial).get_name
+
+puts fu.fuse(rangda, barong).get_name()

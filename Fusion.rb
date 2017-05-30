@@ -25,6 +25,13 @@ class Fusion
   # element.
   @@element_hash = {}
   
+  # A hash that stores special fusion results. Stuff like Rangda + Barong =
+  # Shiva, or Belial + Nebiros = Alice. This stores hashes, with one demon
+  # being the key to another hash that has a specific demon for its key,
+  # which then points to a Demon object.
+  # {"Rangda" => {"Barong => Demon.new("Shiva", "Omega", 76)}}, for example
+  @@special_fusion_hash = {}
+    
   # Read from the given file to populate @@combo_hash. The file should be
   # formatted so each line follows the pattern "race1,race2,race3" where
   # race1 and race2 combine to make race3. Note that duplicate combo lines,
@@ -35,7 +42,7 @@ class Fusion
     data = Array.new
     
     # Open filename and process.
-    fileObj = File.open(filename, "r") do |f|
+    File.open(filename, "r") do |f|
       f.each_line do |line|
         
         # Remove any trailing whitespace characters and store the line as
@@ -70,7 +77,7 @@ class Fusion
   def init_demon_hash(filename)
     data = Array.new
     
-    fileObj = File.open(filename, "r") do |f|
+    File.open(filename, "r") do |f|
       f.each_line do |line|
         data = line.strip.split(",")
         add_to_demon_hash(data[0], data[1].to_i, data[2])
@@ -92,7 +99,7 @@ class Fusion
   def init_element_hash(filename)
     data = Array.new
     
-    fileObj = File.open(filename, "r") do |f|
+    File.open(filename, "r") do |f|
       f.each_line do |line|
         data = line.strip.split(",")
         add_to_element_hash(data[0], data[1])
@@ -103,6 +110,29 @@ class Fusion
   # Add the given race to the element hash.
   def add_to_element_hash(race, element)
     @@element_hash[race] = element
+  end
+  
+  # Read from filename to populate the special fusion hash.
+  def init_special_fusion_hash(filename)
+    data = Array.new
+        
+    File.open(filename, "r") do |f|
+      f.each_line do |line|
+        data = line.strip.split(",")
+        
+        # We'll add the demon both ways to make sure we can fuse both ways.
+        # Alternatively I could've wrote special_fusion to check both demons
+        # for the first key, but I thought this might've been easier.
+        add_to_special_hash(data[0], data[1], data[2], data[3], data[4].to_i)
+        add_to_special_hash(data[1], data[0], data[2], data[3], data[4].to_i)
+      end
+    end
+  end
+  
+  # Add the fusion combo demon1 + demon2 = make_demon(r_name, r_race, r_level)
+  # to the special hash.
+  def add_to_special_hash(demon1, demon2, r_name, r_race, r_level)
+    @@special_fusion_hash[demon1] = {demon2 => make_demon(r_name, r_race, r_level)}
   end
   
   # Combine demon1 and demon2 and return the resulting fusion.
@@ -140,7 +170,7 @@ class Fusion
     else 
       
       # Let's check for special fusions first!
-      sp_result = special_fusion(demon1, demon2)
+      sp_result = special_fusion(demon1.get_name, demon2.get_name)
       
       if sp_result
         return sp_result
@@ -166,50 +196,12 @@ class Fusion
 
   # Some specific demon combos result in a specific result, so we're
   # checking that here
+  # MODIFY TO MAKE SPECIAL_DEMON HASH LATER
   def special_fusion(demon1, demon2)
-    
-    if compare_for_special(demon1, demon2, "Ogun", "Jack Frost")
-      return make_demon("Ghost Q", "Fiend", 26)
-      
-    elsif compare_for_special(demon1, demon2, "Nekomata", "Thor")
-      return make_demon("Neko Shogun", "Hero", 31)
-      
-    elsif compare_for_special(demon1, demon2, "Berserker", "Ictinike")
-      return make_demon("Hagen", "Hero", 39)
-      
-    elsif compare_for_special(demon1, demon2, "Odin", "Orthrus")
-      return make_demon("Sage of Time", "Fiend", 41)
-      
-    elsif compare_for_special(demon1, demon2, "Mothman", "Silky")
-      return make_demon("Billiken", "Fiend", 50)
-      
-    elsif compare_for_special(demon1, demon2, "Hecate", "Scathach")
-      return make_demon("Jeanne D'Arc", "Hero", 50)
-      
-    elsif compare_for_special(demon1, demon2, "Osiris", "Take-Mikazuchi")
-      return make_demon("Yoshitsune", "Hero", 57)
-      
-    elsif compare_for_special(demon1, demon2, "Tzitzimitl", "Remiel")
-      return make_demon("Trumpeter", "Fiend", 63)
-      
-    elsif compare_for_special(demon1, demon2, "Nata Taishi", "Murmur")
-      return make_demon("Guan Yu", "Hero", 70)
-      
-    elsif compare_for_special(demon1, demon2, "Rangda", "Barong")
-      return make_demon("Shiva", "Omega", 76)
-      
-    elsif compare_for_special(demon1, demon2, "Amaterasu", "Yoshitsune")
-      return make_demon("Masakado", "Hero", 82)
-  
-    elsif compare_for_special(demon1, demon2, "Belial", "Nebiros")
-      return make_demon("Alice", "Fiend", 88)
-      
-    elsif compare_for_special(demon1, demon2, "Metatron", "Loki")
-      return make_demon("Lucifer", "Tyrant", 99)
-    
-    else
-      return nil
+    if @@special_fusion_hash.key?(demon1)
+      return @@special_fusion_hash[demon1][demon2]
     end
+    return nil
   end
   
   # Helper function for fuse that determines the level of the result demon
@@ -271,6 +263,11 @@ class Fusion
   # Accessor for @@demon_hash
   def get_demon_hash
     return @@demon_hash
+  end
+  
+  # Accessor for @@special_fusion_hash
+  def get_special_hash
+    return @@special_fusion_hash
   end
 
 end
